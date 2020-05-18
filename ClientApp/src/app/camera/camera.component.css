@@ -6,6 +6,19 @@ video {
 }
 
 #preview {
-  border: solid 6px rgb(34, 34, 34);
+  border: solid 2px #007bff;
   background-color: rgb(38, 38, 38);
+  position: relative;
+}
+
+.float-button {
+  float: right;
+  width: 83%;
+  margin-right: 0px;
+  font-size: 12px;
+  height: 625px;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }

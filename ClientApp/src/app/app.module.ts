@@ -15,6 +15,10 @@ import { DeviceSelectComponent } from './settings/device-select.component';
 import { VideoChatService } from './services/videochat.service';
 import { DeviceService } from './services/device.service';
 import { StorageService } from './services/storage.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppMaterialModule } from './shared-module/app-material.module';
+
+
 
 @NgModule({
   declarations: [
@@ -30,9 +34,11 @@ import { StorageService } from './services/storage.service';
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+    AppMaterialModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' }  
-    ])
+    ]),
+    BrowserAnimationsModule
   ],
   providers: [DeviceService, VideoChatService, StorageService],
   bootstrap: [AppComponent]

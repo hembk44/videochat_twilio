@@ -23,6 +23,8 @@ export class HomeComponent implements OnInit {
 
   private notificationHub: HubConnection;
 
+  imagePath: string = "assets\images\vhp_logo.png";
+
   constructor(
     private readonly videoChatService: VideoChatService) {
   }

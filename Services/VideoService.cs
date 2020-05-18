@@ -16,8 +16,9 @@ namespace VideoChatWebapp.Services
 {
     public class VideoService : IVideoService
     {
-        readonly TwilioSettings _twilioSettings;
+        private readonly TwilioSettings _twilioSettings;
 
+        // inject TwilioSetting values(AccountSid, ApiKey, ApiSecret) into constructor
         public VideoService(Microsoft.Extensions.Options.IOptions<TwilioSettings> twilioOptions)
         {
             _twilioSettings =
@@ -34,6 +35,7 @@ namespace VideoChatWebapp.Services
                          identity ?? Guid.NewGuid().ToString(),
                          grants: new HashSet<IGrant> { new VideoGrant() }).ToJwt();
 
+        // asynchronous method to return chat rooms
         public async Task<IEnumerable<RoomDetails>> GetAllRoomsAsync()
         {
             var rooms = await RoomResource.ReadAsync();

@@ -1,6 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, Renderer2 } from '@angular/core';
 import { createLocalTracks, LocalTrack, LocalVideoTrack } from 'twilio-video';
-import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-camera',
@@ -21,13 +20,11 @@ export class CameraComponent implements AfterViewInit {
   private localTracks: LocalTrack[] = [];
 
   constructor(
-    private readonly storageService: StorageService,
     private readonly renderer: Renderer2) { }
 
   async ngAfterViewInit() {
     if (this.previewElement && this.previewElement.nativeElement) {
-      const selectedVideoInput = this.storageService.get('videoInputId');
-      await this.initializeDevice('videoinput', selectedVideoInput);
+      await this.initializeDevice();
     }
   }
 

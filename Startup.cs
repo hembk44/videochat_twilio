@@ -78,13 +78,13 @@ namespace my_new_app
             {
                 // To learn more about options for serving an Angular SPA from ASP.NET Core,
                 // see https://go.microsoft.com/fwlink/?linkid=864501
-                spa.UseProxyToSpaDevelopmentServer("http://localhost:4200");
+                //spa.UseProxyToSpaDevelopmentServer("http://localhost:4200");
                 spa.Options.SourcePath = "ClientApp";
 
                 if (env.IsDevelopment())
                 {
                     spa.UseAngularCliServer(npmScript: "start");
-                    spa.Options.StartupTimeout = TimeSpan.FromSeconds(200); // <-- add this line
+                    //spa.Options.StartupTimeout = TimeSpan.FromSeconds(200); // <-- add this line
 
                 }
             });

@@ -1,9 +1,10 @@
-<div class="grid-container">
+<!--<div class="grid-container">
 
   <div class="grid-left">
     <app-rooms #rooms (roomChanged)="onRoomChanged($event)"
                [activeRoomName]="!!activeRoom ? activeRoom.name : null"></app-rooms>
   </div>
+
   <div class="grid-content">
     <app-camera #camera [style.display]="!!activeRoom ? 'none' : 'block'"></app-camera>
     <app-participants #participants
@@ -15,7 +16,19 @@
   <div class="grid-right">
     <app-settings #settings (settingsChanged)="onSettingsChanged($event)"></app-settings>
   </div>
- 
-</div>
 
-<!--<div>Hello World</div>-->
+</div>-->
+
+<mat-toolbar>
+  <mat-toolbar-row>
+    <img class="img-fluid" src="assets\images\vhp_white_bg_logo.png">
+    <span class="example-spacer"></span>
+    <span>About us</span> &nbsp; &nbsp;
+    <span>Your profile</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div >
+    <app-rooms #rooms (roomChanged)="onRoomChanged($event)"
+               [activeRoomName]="!!activeRoom ? activeRoom.name : null"></app-rooms>
+</div>

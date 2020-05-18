@@ -1,4 +1,3 @@
 <div id="preview" #preview>
-  <app-activity-indicator *ngIf="isInitializing"
-                          [message]='"Loading preview... Please wait."'></app-activity-indicator>
+  <div *ngIf="isInitializing">Loading preview... Please wait.</div>
 </div>
