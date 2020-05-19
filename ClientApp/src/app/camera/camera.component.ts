@@ -10,6 +10,9 @@ import { createLocalTracks, LocalTrack, LocalVideoTrack } from 'twilio-video';
 export class CameraComponent implements AfterViewInit {
   @ViewChild('preview', { static: false }) previewElement: ElementRef;
 
+  muteIcon: string = "mic";
+  videoIcon: string = "videocam";
+
   get tracks(): LocalTrack[] {
     return this.localTracks;
   }
@@ -78,4 +81,23 @@ export class CameraComponent implements AfterViewInit {
 
     return createLocalTracks({ audio: true, video: true });
   }
+
+  toggleMuteIcon() {
+    if (this.muteIcon === 'mic') {
+      this.muteIcon = 'mic_off';
+
+    } else {
+      this.muteIcon = 'mic'
+    }
+  }
+
+  toggleVideoIcon() {
+    if (this.videoIcon === 'videocam') {
+      this.videoIcon = 'videocam_off';
+
+    } else {
+      this.videoIcon = 'videocam'
+    }
+  }
+
 }

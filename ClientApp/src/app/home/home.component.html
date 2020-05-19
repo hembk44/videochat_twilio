@@ -32,8 +32,16 @@
   <app-rooms #rooms (roomChanged)="onRoomChanged($event)"
              [activeRoomName]="!!activeRoom ? activeRoom.name : null"></app-rooms>
 </div>
-<app-camera #camera [style.display]="!!activeRoom ? 'none' : 'block'"></app-camera>
-<app-participants #participants
+
+<!--<mat-toolbar>
+  <mat-toolbar-row>
+    <mat-icon aria-hidden="false" aria-label="Example video call icon">videocam</mat-icon> &nbsp; &nbsp;
+    Your Camera
+  </mat-toolbar-row>
+</mat-toolbar>-->
+<app-camera class="center" #camera [style.display]="!!activeRoom ? 'none' : 'block'"></app-camera>
+<!--<app-camera #camera [style.display]="!!activeRoom ? 'none' : 'block'"></app-camera>-->
+<!--<app-participants #participants
                   (leaveRoom)="onLeaveRoom($event)"
                   (participantsChanged)="onParticipantsChanged($event)"
                   [style.display]="!!activeRoom ? 'block' : 'none'"
@@ -41,4 +49,4 @@
 
 <div class="grid-right">
   <app-settings #settings (settingsChanged)="onSettingsChanged($event)"></app-settings>
-</div>
+</div>-->

@@ -1,8 +1,11 @@
 :host,
 #preview,
 video {
-  width: 100% !important;
-  height: 100% !important;
+  width: auto !important;
+  height: 80% !important;
+  margin: 2rem;
+  position: relative;
+
 }
 
 #preview {
@@ -21,4 +24,53 @@ video {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+
+.example-card {
+  max-width: 400px;
+  margin-left: 2rem;
+}
+
+.mat-card-header .mat-card-title {
+  font-size: 30px;
+}
+
+.mat-card {
+  background: #fff;
+  color: rgba(0,0,0,.87);
+  margin-left: 2rem;
+  border: solid 2px #0452a5;
+}
+
+
+
+
+
+.mat-toolbar {
+  background: #ffffff;
+  color: #0452a5;
+  margin-left: 1.1rem;
+}
+
+.float-buttom {
+  position: absolute;
+  bottom: 1rem;
+  left: 30%;
+  width: auto;
+  height:auto;
+}
+
+.center {
+  margin: auto;
+  padding: 10px;
+}
+
+
+
+.mat-fab.mat-accent, .mat-flat-button.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
+  background-color: #ffffff;
+}
+
+.mat-fab.mat-accent, .mat-flat-button.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
+  color: #0c0000;
 }
