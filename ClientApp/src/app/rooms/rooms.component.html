@@ -1,35 +1,7 @@
-<div class="jumbotron">
-  <h5 class="display-4"><i class="fas fa-video"></i> Create Your Room</h5>
-  <div class="list-group">
-    <div class="list-group-item d-flex justify-content-between align-items-center">
-      <div class="input-group">
-        <input type="text" class="form-control form-control-lg"
-               placeholder="Room Name" aria-label="Room Name"
-               [(ngModel)]="roomName" (keydown.enter)="onTryAddRoom()">
-        <div class="input-group-append">
-          <button class="btn btn-lg btn-outline-secondary twitter-red"
-                  type="button" [disabled]="!roomName"
-                  (click)="onAddRoom(roomName)">
-            <i class="far fa-plus-square"></i> Create
-          </button>
-        </div>
-      </div>
-    </div>
-    <div *ngIf="!rooms || !rooms.length" class="list-group-item d-flex justify-content-between align-items-center">
-      <p class="lead">
-        Add a room to begin. Other online participants can join or create rooms.
-      </p>
-    </div>
-    <a href="#" *ngFor="let room of rooms"
-       (click)="onJoinRoom(room.name)" [ngClass]="{ 'active': activeRoomName === room.name }"
-       class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-      {{ room.name }}
-      <span class="badge badge-primary badge-pill">
-        {{ room.participantCount }} / {{ room.maxParticipants }}
-      </span>
-    </a>
-  </div>
-</div>
+
+  
+  
+
 <mat-toolbar>
   <mat-toolbar-row>
     <mat-icon aria-hidden="false" aria-label="Example video call icon">video_call</mat-icon> &nbsp; &nbsp;
@@ -37,19 +9,37 @@
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-card class="example-card">
-  <mat-card-header>
-   
-  </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  
   <mat-card-content>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
+    <div class="list-group">
+      <div class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="input-group">
+          <input type="text" class="form-control form-control-lg"
+                 placeholder="Room Name" aria-label="Room Name"
+                 [(ngModel)]="roomName" (keydown.enter)="onTryAddRoom()">
+          <div class="input-group-append">
+            <button class="btn btn-lg btn-outline-secondary twitter-red"
+                    type="button" [disabled]="!roomName"
+                    (click)="onAddRoom(roomName)">
+              <i class="far fa-plus-square"></i> Create
+            </button>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!rooms || !rooms.length" class="list-group-item d-flex justify-content-between align-items-center">
+        <p class="lead">
+          Add a room to begin. Other online participants can join or create rooms.
+        </p>
+      </div>
+      <a href="#" *ngFor="let room of rooms"
+         (click)="onJoinRoom(room.name)" [ngClass]="{ 'active': activeRoomName === room.name }"
+         class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+        {{ room.name }}
+        <span class="badge badge-primary badge-pill">
+          {{ room.participantCount }} / {{ room.maxParticipants }}
+        </span>
+      </a>
+    </div>
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
+ 
 </mat-card>

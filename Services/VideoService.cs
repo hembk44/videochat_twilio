@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -28,6 +29,7 @@ namespace VideoChatWebapp.Services
             TwilioClient.Init(_twilioSettings.ApiKey, _twilioSettings.ApiSecret);
         }
 
+        //get tokens from twilio so that participants can connect to rooms
         public string GetTwilioJwt(string identity)
             => new Token(_twilioSettings.AccountSid,
                          _twilioSettings.ApiKey,
@@ -53,6 +55,7 @@ namespace VideoChatWebapp.Services
                 Task<ResourceSet<ParticipantResource>> participantTask)
             {
                 var participants = await participantTask;
+                Debug.WriteLine(room);
                 return new RoomDetails
                 {
                     Name = room.UniqueName,
