@@ -28,10 +28,10 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<div>
+<!--<div>
   <app-rooms #rooms (roomChanged)="onRoomChanged($event)"
              [activeRoomName]="!!activeRoom ? activeRoom.name : null"></app-rooms>
-</div>
+</div>-->
 
 <!--<mat-toolbar>
   <mat-toolbar-row>
@@ -39,7 +39,7 @@
     Your Camera
   </mat-toolbar-row>
 </mat-toolbar>-->
-<app-camera class="center" #camera [style.display]="!!activeRoom ? 'none' : 'block'"></app-camera>
+<app-camera #camera [style.display]="!!activeRoom ? 'none' : 'block'"></app-camera>
 <!--<app-camera #camera [style.display]="!!activeRoom ? 'none' : 'block'"></app-camera>-->
 <!--<app-participants #participants
                   (leaveRoom)="onLeaveRoom($event)"

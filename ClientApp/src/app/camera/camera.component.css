@@ -1,9 +1,8 @@
 :host,
 #preview,
 video {
-  width: auto !important;
-  height: 80% !important;
-  margin: 2rem;
+  height: 85% !important;
+  margin: 1rem;
   position: relative;
 
 }
@@ -42,14 +41,33 @@ video {
   border: solid 2px #0452a5;
 }
 
+.mat-icon {
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  width: 24px;
+  height: 35px;
+}
 
-
-
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 35px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
 
 .mat-toolbar {
   background: #ffffff;
   color: #0452a5;
-  margin-left: 1.1rem;
 }
 
 .float-buttom {
@@ -73,4 +91,18 @@ video {
 
 .mat-fab.mat-accent, .mat-flat-button.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
   color: #0c0000;
+}
+
+
+.app-fab--absolute {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+@media(min-width: 1024px) {
+  .app-fab--absolute {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
 }

@@ -1,0 +1,33 @@
+<div class="float-buttom">
+
+  <button mat-fab [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>fullscreen</mat-icon>
+      <span>Enter full screen</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>people</mat-icon>
+      <span>Show participants</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>chat</mat-icon>
+      <span>Start chat</span>
+    </button>
+  </mat-menu>
+  &nbsp;
+  <button mat-fab (click)="toggleMuteIcon()" aria-label="Example icon-button with a end call icon">
+    <mat-icon> {{muteIcon}}</mat-icon>
+  </button> &nbsp;
+  <button mat-fab aria-label="Example icon-button with a end call icon">
+    <mat-icon> screen_share</mat-icon>
+  </button> &nbsp;
+  <button mat-fab (click)="toggleVideoIcon()" aria-label="Example icon-button with a end call icon">
+    <mat-icon>{{videoIcon}}</mat-icon>
+  </button> &nbsp;
+  <button mat-fab color="warn" aria-label="Example icon-button with a end call icon">
+    <mat-icon> call_end</mat-icon>
+  </button>
+</div>

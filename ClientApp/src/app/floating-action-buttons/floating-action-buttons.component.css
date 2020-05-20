@@ -1,0 +1,13 @@
+
+.float-buttom {
+  position: absolute;
+  bottom: 3rem;
+  left: 35%;
+  right: 35%;
+  width: auto;
+  height: auto;
+}
+.mat-fab.mat-accent, .mat-flat-button.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
+  background-color: #ffffff;
+  color: #0c0000;
+}

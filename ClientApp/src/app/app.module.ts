@@ -17,6 +17,7 @@ import { DeviceService } from './services/device.service';
 import { StorageService } from './services/storage.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './shared-module/app-material.module';
+import { FloatingActionButtonsComponent } from './floating-action-buttons/floating-action-buttons.component';
 
 
 
@@ -28,7 +29,8 @@ import { AppMaterialModule } from './shared-module/app-material.module';
     ParticipantsComponent,
     CameraComponent,
     SettingsComponent,
-    DeviceSelectComponent
+    DeviceSelectComponent,
+    FloatingActionButtonsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
