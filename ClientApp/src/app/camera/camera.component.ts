@@ -8,6 +8,8 @@ import { createLocalTracks, LocalTrack, LocalVideoTrack } from 'twilio-video';
 })
 
 export class CameraComponent implements AfterViewInit {
+
+  // access the reference to native DOM of it's template (HTML) file 
   @ViewChild('preview', { static: false }) previewElement: ElementRef;
 
   muteIcon: string = "mic";
@@ -23,9 +25,12 @@ export class CameraComponent implements AfterViewInit {
   private localTracks: LocalTrack[] = [];
 
   constructor(
-    private readonly renderer: Renderer2) { }
+    private readonly renderer: Renderer2) {
+    
+  }
 
   async ngAfterViewInit() {
+    console.log(this.previewElement);
     if (this.previewElement && this.previewElement.nativeElement) {
       await this.initializeDevice();
     }
