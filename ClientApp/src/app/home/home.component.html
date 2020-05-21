@@ -21,17 +21,19 @@
 
 <mat-toolbar>
   <mat-toolbar-row>
-    <img class="img-fluid" src="assets\images\vhp_white_bg_logo.png">
+    <img class="img-fluid" src="assets\images\vhp_white_bg_logo.png" />
     <span class="example-spacer"></span>
     <span>About us</span> &nbsp; &nbsp;
     <span>Your profile</span>
   </mat-toolbar-row>
 </mat-toolbar>
 
-<!--<div>
-  <app-rooms #rooms (roomChanged)="onRoomChanged($event)"
-             [activeRoomName]="!!activeRoom ? activeRoom.name : null"></app-rooms>
-</div>-->
+  <app-rooms
+    #rooms
+    (roomChanged)="onRoomChanged($event)"
+    [activeRoomName]="!!activeRoom ? activeRoom.name : null"
+  ></app-rooms>
+
 
 <!--<mat-toolbar>
   <mat-toolbar-row>
@@ -39,7 +41,10 @@
     Your Camera
   </mat-toolbar-row>
 </mat-toolbar>-->
-<app-camera #camera [style.display]="!!activeRoom ? 'none' : 'block'"></app-camera>
+<app-camera
+  #camera
+  [style.display]="!!activeRoom ? 'none' : 'block'"
+></app-camera>
 <!--<app-camera #camera [style.display]="!!activeRoom ? 'none' : 'block'"></app-camera>-->
 <!--<app-participants #participants
                   (leaveRoom)="onLeaveRoom($event)"

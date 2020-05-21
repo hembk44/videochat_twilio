@@ -38,7 +38,8 @@ import { FloatingActionButtonsComponent } from './floating-action-buttons/floati
     FormsModule,
     AppMaterialModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' }  
+      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'camera', component: CameraComponent }
     ]),
     BrowserAnimationsModule
   ],

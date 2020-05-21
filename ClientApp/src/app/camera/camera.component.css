@@ -13,43 +13,15 @@ video {
   position: relative;
 }
 
-.float-button {
-  float: right;
-  width: 83%;
-  margin-right: 0px;
-  font-size: 12px;
-  height: 625px;
-  overflow: auto;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-.example-card {
-  max-width: 400px;
-  margin-left: 2rem;
-}
-
-.mat-card-header .mat-card-title {
-  font-size: 30px;
-}
-
-.mat-card {
-  background: #fff;
-  color: rgba(0,0,0,.87);
-  margin-left: 2rem;
-  border: solid 2px #0452a5;
-}
-
-.mat-icon {
+/* .mat-icon {
   background-repeat: no-repeat;
   display: inline-block;
   fill: currentColor;
   width: 24px;
   height: 35px;
-}
+} */
 
-.material-icons {
+/* .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
@@ -63,7 +35,7 @@ video {
   direction: ltr;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
-}
+} */
 
 .mat-toolbar {
   background: #ffffff;
@@ -72,37 +44,39 @@ video {
 
 .float-buttom {
   position: absolute;
-  bottom: 1rem;
-  left: 30%;
+  bottom: 3rem;
+  left: 50%;
+  right: 25%;
+  margin-left: -150px;
   width: auto;
-  height:auto;
+  height: auto;
 }
 
-.center {
-  margin: auto;
-  padding: 10px;
-}
-
-
-
-.mat-fab.mat-accent, .mat-flat-button.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
+.mat-fab.mat-accent,
+.mat-flat-button.mat-accent,
+.mat-mini-fab.mat-accent,
+.mat-raised-button.mat-accent {
   background-color: #ffffff;
-}
-
-.mat-fab.mat-accent, .mat-flat-button.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
   color: #0c0000;
 }
 
 
-.app-fab--absolute {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
+.mat-menu-item-highlighted:not([disabled]),
+.mat-menu-item.cdk-keyboard-focused:not([disabled]),
+.mat-menu-item.cdk-program-focused:not([disabled]),
+.mat-menu-item:hover:not([disabled]) {
+  background: #0452a5;
+  color: white;
 }
 
-@media(min-width: 1024px) {
-  .app-fab--absolute {
-    bottom: 1.5rem;
-    right: 1.5rem;
-  }
+
+.mat-menu-item .mat-icon-no-color,
+.mat-menu-item-submenu-trigger::after {
+  color: #0c0000;
 }
+
+/* .mat-menu-item,
+.mat-icon-no-color,
+.mat-menu-item-submenu-trigger::after:hover {
+  color: white;
+} */
